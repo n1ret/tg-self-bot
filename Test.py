@@ -1,8 +1,9 @@
-from pyrogram import Client, filters
-from pyrogram.errors import FloodWait, MessageIdInvalid
+import random
 from configparser import ConfigParser
 from time import sleep
-import random
+
+from pyrogram import Client, filters
+from pyrogram.errors import FloodWait, MessageIdInvalid
 
 config = ConfigParser()
 config.read('config.ini')
@@ -57,7 +58,8 @@ def hack(_, msg):
     sleep(3)
     while percent <= 100:
         try:
-            msg.edit('Получение сведений о инопрешельцах ' + str(percent) + '%' + points)
+            msg.edit('Получение сведений о инопрешельцах ' + str(percent) +
+                     '%' + points)
             percent = percent + random.randint(9, 15)
             if points == '👽':
                 points = '👽👽'
