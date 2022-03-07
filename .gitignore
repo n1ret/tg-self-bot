@@ -1,0 +1,14 @@
+# files
+start.bat
+*.session
+*.session-journal
+*.ini
+
+# virtual environments
+.idea
+venv
+.venv
+
+# logs
+*.log
+
